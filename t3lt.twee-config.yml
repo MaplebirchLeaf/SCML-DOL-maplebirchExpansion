@@ -1,0 +1,42 @@
+sugarcube-2:
+  macros:
+    maplebirchModHintContent:
+      name: maplebirchModHintContent
+    maplebirchContent:
+      name: maplebirchContent
+    maplebirchPanel:
+      name: maplebirchPanel
+    setupTabs:
+      name: setupTabs
+    closeButtonMobile:
+      name: closeButtonMobile
+    lanButton:
+      name: lanButton
+      container: true
+    toggleTab:
+      name: toggleTab
+    maplebirchModHint:
+      name: maplebirchModHint
+    closeButton:
+      name: closeButton
+    maplebirchReplace:
+      name: maplebirchReplace
+    lanSwitch:
+      name: lanSwitch
+    maplebirch-playback-controls:
+      name: maplebirch-playback-controls
+    lanLink:
+      name: lanLink
+      container: true
+    numberslider:
+      name: numberslider
+    language:
+      name: language
+      container: true
+    radiobuttonsfrom:
+      name: radiobuttonsfrom
+    lanListbox:
+      name: lanListbox
+      container: true
+    add_bodywriting:
+      name: add_bodywriting

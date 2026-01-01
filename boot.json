@@ -1,0 +1,94 @@
+{
+  "name": "maplebirchEx",
+  "nickName": {
+    "en": "maplebirchExpansion",
+    "cn": "秋枫白桦扩展"
+  },
+  "version": "1.0.0",
+  "imgFileList": [
+    "img/misc/sky/solar-eclipse-0.png",
+    "img/misc/sky/solar-eclipse-1.png",
+    "img/misc/sky/solar-eclipse-2.png"
+  ],
+  "styleFileList": [],
+  "scriptFileList": [],
+  "scriptFileList_preload":[],
+  "scriptFileList_earlyload": [
+    "scriptFile/Expansion.js",
+    "scriptFile/state-variables-v1.js"
+  ],
+  "scriptFileList_inject_early": [],
+  "tweeFileList": [
+    "tweeFile/widgets.twee"
+  ],
+  "additionDir": [
+    
+  ],
+  "additionBinaryFile": [
+
+  ],
+  "additionFile": [],
+  "addonPlugin": [
+    {
+      "modName": "maplebirch",
+      "addonName": "maplebirchAddon",
+      "modVersion": "^2.7.0",
+      "params": {
+        "script": [
+          "scriptFile/Framework.js",
+          "scriptFile/SolarEplice.js"
+        ]
+      }
+    },
+    {
+      "modName": "ModdedClothesAddon",
+      "addonName": "ModdedClothesAddon",
+      "modVersion": "^1.1.0",
+      "params": {
+
+      }
+    },
+    {
+      "modName": "TweeReplacer",
+      "addonName": "TweeReplacerAddon",
+      "modVersion": "1.0.0",
+      "params": [
+      ]
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "addonName": "ImageLoaderAddon",
+      "modVersion": "^2.3.0",
+      "params": []
+    },
+    {
+      "modName": "ReplacePatcher",
+      "addonName": "ReplacePatcherAddon",
+      "modVersion": "1.0.0",
+      "params": {
+        "js": [
+          
+        ]
+      }
+    },
+    {
+      "modName": "ModdedFeatsAddon",
+      "addonName": "ModdedFeatsAddon",
+      "modVersion": "^1.0.0",
+      "params": {
+        "feats": [
+
+        ]
+      }
+    },
+    {
+      "modName": "BeautySelectorAddon",
+      "addonName": "BeautySelectorAddon",
+      "modVersion": "^2.0.0",
+      "params": {
+       "types": [
+        ]
+      }
+    }
+  ]
+}
