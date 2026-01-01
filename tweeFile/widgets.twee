@@ -23,8 +23,8 @@
 
 <!-- 模组提示 -->
 <<widget 'maplebirchModHint'>>
-  <<if !$maplebirch.hintlocation>><<set $maplebirch.hintlocation to 'ModHint'>><</if>>
-  <<switch $maplebirch.hintlocation>>
+  <<if !$maplebirchEx.hintlocation>><<set $maplebirchEx.hintlocation to 'ModHint'>><</if>>
+  <<switch $maplebirchEx.hintlocation>>
     <<case 'ModHint'>><<maplebirchModHintContent>>
     <<case 'Content'>><<maplebirchContent>>
     <<case 'Panel'>><<maplebirchPanel>>
@@ -33,8 +33,8 @@
 <</widget>>
 
 <<widget 'titleMaplebirchModHint'>>
-  <<if !$maplebirch.hintlocation>><<set $maplebirch.hintlocation to 'ModHint'>><</if>>
-  <<switch $maplebirch.hintlocation>>
+  <<if !$maplebirchEx.hintlocation>><<set $maplebirchEx.hintlocation to 'ModHint'>><</if>>
+  <<switch $maplebirchEx.hintlocation>>
     <<case 'ModHint'>><<setupTabs 0>>
     <<case 'Content'>><<setupTabs 1>>
     <<case 'Panel'>><<setupTabs 2>>
@@ -43,15 +43,15 @@
   <div id='overlayTabs' class='tab'>
     <<closeButtonMobile>>
     <<lanButton 'mods introduction' 'title'>>
-      <<toggleTab>><<set $maplebirch.hintlocation to 'ModHint'>>
+      <<toggleTab>><<set $maplebirchEx.hintlocation to 'ModHint'>>
       <<replace #customOverlayContent>><<maplebirchModHint>><</replace>>
     <</lanButton>>
     <<lanButton 'mods contents' 'title'>>
-      <<toggleTab>><<set $maplebirch.hintlocation to 'Content'>>
+      <<toggleTab>><<set $maplebirchEx.hintlocation to 'Content'>>
       <<replace #customOverlayContent>><<maplebirchModHint>><</replace>>
     <</lanButton>>
     <<lanButton 'character panel' 'title'>>
-      <<toggleTab>><<set $maplebirch.hintlocation to 'Panel'>>
+      <<toggleTab>><<set $maplebirchEx.hintlocation to 'Panel'>>
       <<replace #customOverlayContent>><<maplebirchModHint>><</replace>>
       <<run maplebirch.trigger('characterRender')>>
     <</lanButton>>

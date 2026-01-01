@@ -12,6 +12,7 @@
         storage: {}
       },
       wardrobeSearch: '',
+      hintlocation: 'maplebirchModHint'
     };
     if (!data || Object.keys(data).length === 0 || !data.version || data.version === '0.0.0') {
       Object.assign(data, defaults);
