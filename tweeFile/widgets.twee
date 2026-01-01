@@ -61,7 +61,7 @@
 
 <<widget 'maplebirchModHintMobile'>>
   <<if $options.maplebirch?.modHint is 'mobile' && $options.sidebarStats isnot 'disabled'>>
-    <input type='button' class='saveMenuButton maplebirchModHintMobile' value='' onclick='maplebirch.tool.modhint.hintClicked()'>
+    <input type='button' class='saveMenuButton maplebirchModHintMobile' value='' onclick='maplebirch.Expansion.modhint.hintClicked()'>
   <</if>>
 <</widget>>
 
@@ -77,8 +77,8 @@
 <<widget 'maplebirchModHintContent'>>
   <span class='searchButtons' style='display:flex'>
     <<textbox '_maplebirchModHintTextbox' ''>>
-    <<lanButton 'search' 'capitalize'>><<run maplebirch.tool.modhint.searchButtonClicked()>><</lanButton>>
-    <<lanButton 'clear' 'capitalize'>><<run maplebirch.tool.modhint.clearButtonClicked()>><</lanButton>>
+    <<lanButton 'search' 'capitalize'>><<run maplebirch.Expansion.modhint.searchButtonClicked()>><</lanButton>>
+    <<lanButton 'clear' 'capitalize'>><<run maplebirch.Expansion.modhint.clearButtonClicked()>><</lanButton>>
   </span>
   <div id='maplebirchModHintContent'><<= setup.maplebirch.hint.play>></div>
 <</widget>>

@@ -10,7 +10,10 @@
     "img/misc/sky/solar-eclipse-1.png",
     "img/misc/sky/solar-eclipse-2.png"
   ],
-  "styleFileList": [],
+  "styleFileList": [
+    "styles/maplebirch-styles.css",
+    "styles/maplebirchPanel​.css"
+  ],
   "scriptFileList": [],
   "scriptFileList_preload":[],
   "scriptFileList_earlyload": [
