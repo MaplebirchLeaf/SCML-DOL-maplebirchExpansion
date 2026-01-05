@@ -2,35 +2,22 @@
   maplebirch.tool.framework.addTo('HintMobile', 'maplebirchModHintMobile');
   maplebirch.tool.framework.addTo('MenuBig', 'maplebirchModHintDesktop');
   maplebirch.tool.framework.addTo('Options', 'maplebirch-Expansion-Options');
-  Object.assign(maplebirch.tool.framework.widgetPassage,{
+  Object.assign(maplebirch.tool.framework.widgetPassage, {
     'Widgets Wardrobe': [
         { src: ')<</if>>\n\t\t<br>', applyafter: '\n\t\t<<lanSwitch "Search: " "搜索：">><<textbox "$maplebirchEx.wardrobeSearch" $maplebirchEx.wardrobeSearch>><div class="outfitContainer no-numberify" style="display: inline-block;"><<lanButton "confirm" "capitalize">><<run Dynamic.render()>><</lanButton>></div><br>' },
         { src: '<</if>>\n\t\t\t<div class="wardrobeItem wardrobe-action no-numberify">', to: '<</if>>\n\t\t\t<<if $maplebirchEx.wardrobeSearch isnot "">><<run $maplebirchEx.wardrobeSearch.toLowerCase()>><<language>><<option "CN">><<if !_itemData.cn_name_cap.toLowerCase().includes($maplebirchEx.wardrobeSearch)>><<continue>><</if>><<option "EN">><<if !_itemData.name_cap.toLowerCase().includes($maplebirchEx.wardrobeSearch)>><<continue>><</if>><</language>><</if>>\n\t\t\t<div class="wardrobeItem wardrobe-action no-numberify">'}
       ]
     });
+  maplebirch.tool.framework.widgetPassage['Widgets Mirror'].push({ src: '</div>\n\t\t</div>\n\t\t<div class="settingsToggleItemWide">', to: '</div>\n\t\t</div>\n\t\t<<maplebirchBodyWriting>>\n\t\t<div class="settingsToggleItemWide">' });
 
   maplebirch.once(':storyready', () => {
     setup.maplebirch.content.push(`
       <div id='ConsoleCheat'>
         <details class='cheat-section' open>
           <summary class='cheat-section'><span class='gold'><<lanSwitch 'Cheating Collection' '作弊集'>></span></summary>
-          <div class='searchButtons'>
-            <div class='input-row'>
-              <span class='gold'><<lanSwitch 'NAME' '命名'>></span>
-              <<textbox '_maplebirchModCheatNamebox' ''>>
-              <span class='gold'><<lanSwitch 'CODE' '编码'>></span>
-              <<textbox '_maplebirchModCheatCodebox' ''>>
-              <<lanButton 'create' 'capitalize'>><<run maplebirch.tool?.cheat.createFromForm()>><</lanButton>>
-            </div>
-          </div>
-          <div class='searchButtons'>
-            <div class='input-row'><<textbox '_maplebirchCheatSearch' ''>>
-              <<lanButton 'search' 'capitalize'>><<run maplebirch.tool?.cheat.searchAndDisplay()>><</lanButton>>
-              <<lanButton 'all' 'capitalize'>><<run maplebirch.tool?.cheat.displayAll()>><</lanButton>>
-              <<lanButton 'clear' 'capitalize'>><<run maplebirch.tool?.cheat.updateContainer('maplebirch-cheat-container', maplebirch.tool?.cheat.clearAll())>><</lanButton>>
-            </div>
-          </div>
-          <div id='maplebirch-cheat-container' class='settingsGrid'><<= maplebirch.tool?.cheat.HTML()>></div>
+          <div id='maplebirch-cheat-panel' class='searchButtons'><<= maplebirch.Expansion.cheat.panel>></div>
+          <div id='maplebirch-cheat-search' class='searchButtons'><<= maplebirch.Expansion.cheat.search>></div>
+          <div id='maplebirch-cheat-status' class=''></div><div id='maplebirch-cheat-content' class='settingsGrid'><<= maplebirch.Expansion.cheat.content>></div>
         </details>
       </div><<maplebirch-playback 'maplebirchEx'>>
     `);

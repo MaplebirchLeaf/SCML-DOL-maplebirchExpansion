@@ -16,7 +16,6 @@
 }
 
 details.maplebirch-playback {
-  border-radius: 0;
   overflow: hidden;
   border: 1px solid var(--600);
   margin-top: 0.5rem;

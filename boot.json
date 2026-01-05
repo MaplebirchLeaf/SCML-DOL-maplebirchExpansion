@@ -17,7 +17,6 @@
   "scriptFileList": [],
   "scriptFileList_preload":[],
   "scriptFileList_earlyload": [
-    "scriptFile/Expansion.js",
     "scriptFile/state-variables-v1.js"
   ],
   "scriptFileList_inject_early": [],
@@ -37,6 +36,9 @@
       "addonName": "maplebirchAddon",
       "modVersion": "^2.7.0",
       "params": {
+        "module": [
+          "scriptFile/Expansion.js"
+        ],
         "script": [
           "scriptFile/Framework.js",
           "scriptFile/SolarEplice.js"
